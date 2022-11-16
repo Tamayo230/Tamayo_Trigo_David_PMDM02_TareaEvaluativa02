@@ -7,28 +7,29 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
+      
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'noticias',
+        loadChildren: () => import('../pages/leer/noticias/noticias.module').then( m => m.NoticiasPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-      },
-      {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'leer',
+        loadChildren: () => import('../pages/leer/leer.module').then( m => m.LeerPageModule)
       },
       {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
+      },
+      {
+        path: 'tab3',
+        loadChildren: () => import('../pages/tab3/tab3.module').then(m => m.Tab3PageModule)
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/noticias',
     pathMatch: 'full'
   }
 ];
