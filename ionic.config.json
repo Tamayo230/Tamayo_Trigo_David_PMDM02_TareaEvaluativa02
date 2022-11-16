@@ -1,0 +1,7 @@
+{
+  "name": "noticiero",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
