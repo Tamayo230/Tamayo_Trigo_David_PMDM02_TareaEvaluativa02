@@ -10,7 +10,7 @@ const routes: Routes = [
       
       {
         path: 'noticias',
-        loadChildren: () => import('../pages/leer/noticias/noticias.module').then( m => m.NoticiasPageModule)
+        loadChildren: () => import('../pages/noticias/noticias.module').then( m => m.NoticiasPageModule)
       },
       {
         path: 'leer',
