@@ -18,7 +18,7 @@
   -->
   <ion-list *ngFor="let noticia of GestionNoticias.getNoticias ()">
     <ion-item>
-      <ion-label>{{noticia.id}} : {{noticia.nombre}} {{noticia.apellido}}</ion-label>
+      <ion-label>{{noticia.source.id}} : {{noticia.author}} {{noticia.description}}</ion-label>
      <!-- <ion-icon slot="end" name="trash" (click)="borrar(persona.id)"></ion-icon>
       <ion-icon slot="end" name="create" (click)="modificar(persona)"></ion-icon>-->
     </ion-item>

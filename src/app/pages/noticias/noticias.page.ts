@@ -10,12 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasPage {
 
-  private noticias : INoticia[] = [];
 
+private noticiasno : INoticia[] = [];
   constructor(public GestionNoticias: GestionNoticiasService) { 
-
-    this.noticias = GestionNoticias.getNoticias();
-  //  console.log(GestionNoticias.getNoticias);
+    this.noticiasno = GestionNoticias.getNoticias();
+    console.log(this.noticiasno)
+   
   }
 
 
