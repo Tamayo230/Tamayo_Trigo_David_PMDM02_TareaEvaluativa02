@@ -1,27 +1,22 @@
 
+export interface ObjetoGeneral {
+  status: string;
+  totalResults: number;
+  articles: Article[];
+}
 
-export interface IPersona {
-  id: string;
-  nombre: string;
-  apellido: string;
+interface Article {
+  source: Source;
+  author?: string;
+  title: string;
+  description?: string;
+  url: string;
+  urlToImage?: string;
+  publishedAt: string;
+  content?: string;
 }
-export interface INoticia {
-  id: string;
-  nombre: string;
-  apellido: string;
+
+interface Source {
+  id?: string;
+  name: string;
 }
-//export interface INoticias {
-  //  source: Source;
-    //author: string;
-    //title: string;
-    //description: string;
-    //url: string;
-    //urlToImage?: string;
-    //publishedAt: string;
-    //content: string;
- // }
-  
- // export interface Source {
-  //  id: string;
-  //  name: string;
-  //}
