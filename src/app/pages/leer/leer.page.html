@@ -4,11 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-card>
-  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+<ion-card *ngFor="let articulo of GestionNoticias.getNoticiasLeer()">
+  <img alt="Silhouette of mountains" src= {{articulo.url}}/>
   <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    <ion-card-title>{{articulo.title}}</ion-card-title>
+    <ion-card-subtitle>{{articulo.description}}</ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>

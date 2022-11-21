@@ -15,6 +15,12 @@ export class NoticiasPage {
   constructor(public GestionNoticias: GestionNoticiasService) { 
    
   }
+  anadir(articulo: Article){
+     this.GestionNoticias.llenarArrayLeer(articulo);
+  }
+  borrar(){
+  //  this.GestionNoticias.(articulo);
+  }
   ngOnInit() {
   
   }

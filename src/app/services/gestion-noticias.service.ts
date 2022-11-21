@@ -10,6 +10,7 @@ import { Observable } from 'rxjs'
 export class GestionNoticiasService {
   
   public articulos: Article[] = [];
+  public articulosSeleccionados: Article[] = [];
   public noticia : Noticia = {} as Noticia ;
 
   //el el contructor se hara todo pues sera el sitio donde se inicialicen los datos una vez conseguidos
@@ -33,6 +34,17 @@ export class GestionNoticiasService {
       console.log("Articulos");
       console.log(this.articulos);
     });
+  }
+  //Funcion para llenar array con las noticias seleccionadas
+  llenarArrayLeer(articulo:Article){
+    let nuevoAticulo : Article = articulo;
+    this.articulosSeleccionados.push(nuevoAticulo);
+    console.log(this.articulosSeleccionados);
+
+  }
+
+  getNoticiasLeer(){
+    return this.articulosSeleccionados;
   }
 
   getNoticias(){

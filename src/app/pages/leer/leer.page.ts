@@ -1,3 +1,5 @@
+import { Article } from './../../interfaces/mis-interfaces';
+import { GestionNoticiasService } from './../../services/gestion-noticias.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeerPage implements OnInit {
 
-  constructor() { }
+  public ArrayLeer : Article[] = [];
+
+  constructor(public GestionNoticias : GestionNoticiasService) { }
 
   ngOnInit() {
   }
