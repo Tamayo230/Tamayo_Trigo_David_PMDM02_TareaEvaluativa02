@@ -16,9 +16,9 @@
     Utilizamos *ngFor para generar componentes repetidos, los items de una lista
     Leemos los valores de cada item de un array de objetos JSON definidos en el fichero .ts
   -->
-  <ion-list *ngFor="let noticia of GestionNoticias.getNoticias ()">
+  <ion-list *ngFor="let articulo of GestionNoticias.getNoticias()">
     <ion-item>
-      <ion-label>{{noticia}} : {{noticia}} {{noticia}}</ion-label>
+      <ion-label>{{articulo.title}} </ion-label>
      <!-- <ion-icon slot="end" name="trash" (click)="borrar(persona.id)"></ion-icon>
       <ion-icon slot="end" name="create" (click)="modificar(persona)"></ion-icon>-->
     </ion-item>

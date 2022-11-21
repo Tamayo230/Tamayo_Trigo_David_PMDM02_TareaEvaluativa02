@@ -1,4 +1,4 @@
-import { ObjetoGeneral } from './../../interfaces/mis-interfaces';
+import {  Noticia, Article } from './../../interfaces/mis-interfaces';
 import { GestionNoticiasService } from './../../services/gestion-noticias.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,23 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasPage {
   //creamos array para trabajar
-  private articulos : ObjetoGeneral[] = []
+  public articulos : Article[] = [];
 
   constructor(public GestionNoticias: GestionNoticiasService) { 
-
-   //console.log("NoticiasPage")
-   // console.log(GestionNoticias.getNoticias)
-  //  console.log(this.noticiasno)
    
   }
   ngOnInit() {
-    //console.log(this.articulos)
-   // this.cargarArticulos
+  
   }
-  cargarArticulos(){
- //  this.articulos = this.GestionNoticias.getNoticias() 
-  }
-
-
-
+ 
 }

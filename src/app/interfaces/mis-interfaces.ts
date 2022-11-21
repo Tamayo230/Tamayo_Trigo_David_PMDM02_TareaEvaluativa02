@@ -1,11 +1,11 @@
 
-export interface ObjetoGeneral {
+export interface Noticia {
   status: string;
   totalResults: number;
   articles: Article[];
 }
 
-interface Article {
+export interface Article {
   source: Source;
   author?: string;
   title: string;
@@ -16,7 +16,7 @@ interface Article {
   content?: string;
 }
 
-interface Source {
+export interface Source {
   id?: string;
   name: string;
 }
