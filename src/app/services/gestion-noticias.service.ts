@@ -39,11 +39,13 @@ export class GestionNoticiasService {
   llenarArrayLeer(articulo:Article){
     let nuevoAticulo : Article = articulo;
     this.articulosSeleccionados.push(nuevoAticulo);
+   // console.log(this.articulosSeleccionados[0]);
     console.log(this.articulosSeleccionados);
 
   }
 
   getNoticiasLeer(){
+   
     return this.articulosSeleccionados;
   }
 

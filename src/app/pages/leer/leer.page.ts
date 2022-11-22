@@ -13,6 +13,12 @@ export class LeerPage implements OnInit {
 
   constructor(public GestionNoticias : GestionNoticiasService) { }
 
+  irWeb(articulo: Article){
+    console.log(articulo.url);
+  }
+  borrar(articulo: Article){
+    console.log(articulo.url);
+  }
   ngOnInit() {
   }
 
