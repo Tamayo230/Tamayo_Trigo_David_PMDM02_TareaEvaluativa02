@@ -4,26 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<!--<ion-content>
-  <ion-list-header>
-    <ion-label>TITLE</ion-label>
-    <ion-button>DESCRIPCION</ion-button>
-  </ion-list-header>
-</ion-content>
--->
 <ion-content >
-  <!-- 
-    Utilizamos *ngFor para generar componentes repetidos, los items de una lista
-    Leemos los valores de cada item de un array de objetos JSON definidos en el fichero .ts
-  -->
   <ion-list *ngFor="let articulo of GestionNoticias.getNoticias()">
     <ion-list-header>
       <ion-label>{{articulo.source.name}}</ion-label>
     </ion-list-header>
-   
-    
-  
-
     <ion-item>
       <ion-label> {{articulo.title}}</ion-label>
     </ion-item>
@@ -31,13 +16,5 @@
       <ion-button size="small" shape="round" expand="undefined"(click)="anadir(articulo)">Añadir</ion-button>
       <ion-button  size="small" shape="round" expand="undefined"(click)="borrar(articulo.source.name)">Borrar</ion-button>
     </ion-item>
-     
-     
-   
-     <!-- <ion-icon slot="end" name="trash" (click)="borrar(persona.id)"></ion-icon>
-      <ion-icon slot="end" name="create" (click)="modificar(persona)"></ion-icon>-->
-    </ion-list>
-  
-    
-  
+  </ion-list> 
 </ion-content>

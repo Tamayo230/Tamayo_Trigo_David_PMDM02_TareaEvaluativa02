@@ -9,23 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./noticias.page.scss'],
 })
 export class NoticiasPage {
-  //creamos array para trabajar
-  public articulos : Article[] = [];
-  public clicado = false;
-  public idArticulo : string = "";
-  constructor(public GestionNoticias: GestionNoticiasService) { 
-   
-  }
   
+  constructor(public GestionNoticias: GestionNoticiasService) {}
+  //evento btnAnadir 
   anadir(articulo: Article){
-     this.GestionNoticias.llenarArrayLeer(articulo);
-     this.clicado = !this.clicado;
-    
-
+    //llamamos a la funcion llenarArrayLeer Pasandole el articulo al objeto de nuestro servicio
+     this.GestionNoticias.llenarArrayLeer(articulo);  
   }
+  //evento btnBorrar
   borrar(nameArticulo : string){
+    //llamamos a la funcion borrarNoticia Pasandole el nombre del articulo al objeto de nuestro servicio
    this.GestionNoticias.borrarNoticia(nameArticulo);
   }
+
   ngOnInit() {
   
   }

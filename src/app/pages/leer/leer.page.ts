@@ -10,14 +10,11 @@ import { AlertController } from '@ionic/angular';
 })
 export class LeerPage implements OnInit {
 
-  public ArrayLeer : Article[] = [];
-
   constructor(public GestionNoticias : GestionNoticiasService,private alerta: AlertController) { }
 
   irWeb(articulo: Article){
     console.log(articulo.url);
-    
-   // window.open(articulo.url);
+    window.open(articulo.url);
   }
   borrar(articulo: string){
     this.presentarAlerta(articulo);
@@ -41,7 +38,6 @@ export class LeerPage implements OnInit {
           text: 'Okay',
           handler: (data) => {
              console.log(data);
-            // console.log(data.ID);
             this.GestionNoticias.borrarNoticia(articulo);
           }
         }
