@@ -15,7 +15,7 @@
     <ion-card-content>{{articulo.content}}</ion-card-content>
     <ion-item>
       <ion-label color="primary" (click)="irWeb(articulo)">leer</ion-label>
-      <ion-icon slot="end" name="trash" (click)="borrar(articulo)"></ion-icon>
+      <ion-icon slot="end" name="trash" (click)="borrar(articulo.source.name)"></ion-icon>
     </ion-item>
    
 

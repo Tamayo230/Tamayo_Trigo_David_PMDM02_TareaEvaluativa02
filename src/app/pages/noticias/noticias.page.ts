@@ -1,4 +1,4 @@
-import {  Noticia, Article } from './../../interfaces/mis-interfaces';
+import { Noticia, Article, Source } from './../../interfaces/mis-interfaces';
 import { GestionNoticiasService } from './../../services/gestion-noticias.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,15 +11,20 @@ import { Component, OnInit } from '@angular/core';
 export class NoticiasPage {
   //creamos array para trabajar
   public articulos : Article[] = [];
-
+  public clicado = false;
+  public idArticulo : string = "";
   constructor(public GestionNoticias: GestionNoticiasService) { 
    
   }
+  
   anadir(articulo: Article){
      this.GestionNoticias.llenarArrayLeer(articulo);
+     this.clicado = !this.clicado;
+    
+
   }
-  borrar(){
-  //  this.GestionNoticias.(articulo);
+  borrar(nameArticulo : string){
+   this.GestionNoticias.borrarNoticia(nameArticulo);
   }
   ngOnInit() {
   

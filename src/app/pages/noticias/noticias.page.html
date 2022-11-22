@@ -22,14 +22,14 @@
     </ion-list-header>
    
     
-   <!-- <ion-label>{{articulo.source.name}}</ion-label>-->
+  
 
     <ion-item>
       <ion-label> {{articulo.title}}</ion-label>
     </ion-item>
     <ion-item button>
       <ion-button size="small" shape="round" expand="undefined"(click)="anadir(articulo)">Añadir</ion-button>
-      <ion-button size="small" shape="round" expand="undefined"(click)="borrar">Borrar</ion-button>
+      <ion-button  size="small" shape="round" expand="undefined"(click)="borrar(articulo.source.name)">Borrar</ion-button>
     </ion-item>
      
      
